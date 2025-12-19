@@ -1,0 +1,174 @@
+
+/*resetear boody*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Generales */
+.header {
+    background-color: #fab752;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu__conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu__conteiner h1{
+    font-family: cursive;
+    font-size: 25px;
+     font-weight: 500;
+     color: hsl(0, 3%, 8%,0.6);
+}
+
+/* Ocultar checkbox del menú */
+#menu {
+    display: none;
+}
+
+/* Navegación */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: hsl(0, 3%, 8%,0.6);
+    font-family: cursive;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+
+/* Carrito Desplegable */
+.submenu {
+    position: relative;
+    list-style: none;
+}
+
+#icon__carrito {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#lista__carrito {
+    display: none; /* Se oculta por defecto */
+    position: absolute;
+    right: 0;
+    background: rgb(247, 149, 3,0.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 8px;
+}
+
+/* Mostrar carrito al pasar el mouse */
+.submenu:hover #lista__carrito {
+    display: block;
+}
+
+/* Estilo de la tabla del carrito */
+table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+.btn-2 {
+    display: block;
+    background: #ff4757;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.bi-list{
+    font-size: 25px;
+    display: none;
+}
+
+
+.seccion__texto {
+    background-color: hsla(210, 100%, 3%, 0.8); /* Cambiado a hsla para que el 0.8 funcione correctamente */
+    padding: 20px 10px; /* Un poco más de aire arriba y abajo */
+    text-align: center;
+    border-top: 1px solid #0f0f0f;
+    border-bottom: 1px solid #fffcfc;
+    margin-top: 50px;
+    width: 100%; /* Cambiado de auto a 100% para asegurar que cubra el ancho */
+}
+
+.seccion__texto h2 {
+    font-size: 20px;
+    color: #d8b620;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Un poco más de espacio entre letras para elegancia */
+    max-width: 900px;
+    margin: 0 auto; /* Centra el bloque del h2 */
+    line-height: 1.4; /* Mejora la lectura si el texto se divide en dos líneas */
+}
+
+/* Resalte para el descuento */
+.seccion__texto h2 span {
+    color: #f7071b; /* Rojo intenso */
+    font-weight: 900;
+    padding: 0 10px; /* Espaciado lateral para que no pegue con las letras */
+    font-size: 24px; /* Un poco más grande para que resalte el "30% OFF" */
+    display: inline-block; /* Permite que el tamaño y padding funcionen mejor */
+}
+
+/*banner*/
+
+.main {
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.conteiner__banner {
+    display: flex;
+    flex-basis: calc(33.3% - 15px);
+    justify-content: center; 
+    align-items: center; /* Vertically centers images */
+    gap: 15px;           /* Modern way to add space between items */
+    padding: 20px;
+}
+
+.conteiner__banner img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 400px;    /* Prevents images from getting too huge on ultrawide monitors */
+    height: auto;        /* Maintains aspect ratio */
+    border-radius: 8px;  /* Optional: gives a softer look */
+}
+
+/* Tablet and Mobile adjustment */
+@media (max-width: 768px) {
+    .conteiner__banner {
+        flex-direction: column; /* Stacks images vertically */
+    }
+    
+    .conteiner__banner img {
+        width: 80%; /* Makes images larger on small screens */
+    }
+}
